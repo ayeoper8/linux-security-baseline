@@ -1,0 +1,10 @@
+# NEVER commit private keys or credentials
+*.pem
+*.pfx
+*.key
+qualys-scanner-key
+id_*
+*.pub
+# Local working files
+*.swp
+.DS_Store

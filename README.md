@@ -14,22 +14,6 @@ Windows-majority environment with no prior configuration-management tooling.
 > and SSH keys are placeholders (`<SCANNER_IP>`, `<APP_ID>`, `kv-example-*`).
 > Replace the values in the script's CONFIGURATION block before use.
 
-## What this demonstrates
-
-- **Security engineering, not just scripting** — idempotent, non-interactive,
-  safe-to-re-run provisioning designed to drop into cloud-init and Ansible.
-- **Risk-based decision-making** — every deviation from CIS and every accepted
-  risk is documented with its rationale and compensating controls
-  ([`docs/04-decisions.md`](docs/04-decisions.md)).
-- **Cloud-native secrets handling** — scanner credentials live only in Azure Key
-  Vault, retrieved at scan time; nothing sensitive is committed or stored on hosts.
-- **Production safety instincts** — sshd changes validate-then-reload (never
-  restart, to avoid dropping the session applying them); root login is disabled
-  only once an alternate admin is verified; failures roll back cleanly.
-- **Credential lifecycle ownership** — a full inventory of every secret, where it
-  lives, when it expires, and how to rotate it
-  ([`docs/06-credentials.md`](docs/06-credentials.md)).
-
 ## What the script does
 
 `apply-linux-baseline.sh` brings a host to the build standard in one run. Modules

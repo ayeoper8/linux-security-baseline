@@ -12,7 +12,6 @@ Windows-majority environment with no prior configuration-management tooling.
 > **Sanitised reference implementation.** This is a public, generalised version
 > of a baseline I run in production. Internal IPs, Azure identifiers, hostnames,
 > and SSH keys are placeholders (`<SCANNER_IP>`, `<APP_ID>`, `kv-example-*`).
-> Replace the values in the script's CONFIGURATION block before use.
 
 ## What the script does
 
